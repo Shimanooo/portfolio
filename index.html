@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HONOKA YAMAMOTO</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.bxslider').bxSlider({
+                auto: true,
+                speed: 1500,
+                controls: false,
+                pager: false
+            });
+        });
+
+        $(function() {
+            $(".click_animation").click(function() {
+                //クリックしたらやること
+            });
+        });
+    </script>
+</head>
+
+<body class="index">
+    <div id="toppage">
+        <div id="header">
+            <div id="pagetop"></div>
+            <div class="container">
+                <h1>HONOKA YAMAMOTO</h1>
+                <nav class="header">
+                    <ul>
+                        <li><a href="http://127.0.0.1:52320/CONTACT.html">CONTACT</a></li>
+                        <li><a href="http://127.0.0.1:52320/WORKS.html">WORKS</a></li>
+                        <li><a href="http://127.0.0.1:52320/PROFILE.html">PROFILE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <ul class="bxslider">
+            <li><img src="midtown.jpeg" alt=""></li>
+            <li><img src="wintersakura.jpeg" alt=""></li>
+            <li><img src="supermoon.jpeg" alt=""></li>
+        </ul>
+        <div id="next-btn"></div>
+    </div>
+
+    <footer>
+        <nav class="SNS_icon">
+            <ul>
+                <li>
+                    <a href="https://www.nicovideo.jp/user/76941541" target="_blank" class="niconicodouga"><img src="niconico.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCSMC0C1MszMZkjbXfqBauUA?view_as=subscriber1" target="_blank" class="youtube"><img src="youtube.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/honokayam" target="_blank" class="facebook"><img src="facebook.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/honokayam__/" target="_blank" class="instagram"><img src="instagram.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/shimano_LiT" target="_blank" class="twitter"><img src="twitter.png" alt=""></a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
