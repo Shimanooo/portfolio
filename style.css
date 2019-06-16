@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-
+    font-family: 'Allerta Stencil', sans-serif;
 }
 
 #header {
@@ -74,10 +74,76 @@ nav li {
 }
 
 nav a {
-    font-size: 20px;
+    font-size: 25px;
     display: block;
     text-decoration: none;
     color: #fff;
+}
+
+.sm-link {
+    --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+    --uismLinkTextColor: var(--smLinkTextColor);
+    --uismLinkTextColorHover: var(--smLinkTextColorHover);
+
+    display: var(--uismLinkDisplay);
+    color: var(--uismLinkTextColor);
+    position: relative;
+    overflow: hidden;
+}
+
+.sm-link {
+    --smLinkPadding: 10px 15px;
+    --smLinkLineWeight: 5px;
+    --smLinkLineColor: #fff;
+    --smLinkTextColor: #fff;
+    --smLinkTextColorHover: #313131;
+}
+
+a.sm-link {
+    text-decoration: none;
+}
+
+/* sm-link_text */
+
+.sm-link_text::before {
+    content: attr(data-sm-link-text);
+    color: var(--uismLinkTextColorHover);
+    position: absolute;
+}
+
+.sm-link_text::before,
+.sm-link_text .sm-link__label {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(.86, .6, .08, 1.01);
+    transition-duration: .3s;
+}
+
+.sm-link_text:hover ::before,
+.sm-link_text:hover .sm-link__label {
+    transition-duration: .4s;
+}
+
+.sm-link2::before {
+    top: 0;
+    transform: rotateY(90deg);
+    transition-duration: .3s;
+}
+
+.sm-link2 .sm-link__label {
+    transform: rotateY(0);
+    transition-delay: .3s;
+    transition-duration: .3s;
+}
+
+.sm-link2:hover::before {
+    transform: rotateY(0deg);
+    transition-delay: .3s;
+}
+
+.sm-link2:hover .sm-link__label {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+    transition-duration: .3s;
 }
 
 footer {
@@ -97,12 +163,18 @@ footer nav {
 footer .SNS_icon {
     width: 550px;
     height: 30px;
-    margin-right: 565px;
+    margin-right: 625px;
 }
 
 footer .SNS_icon img {
-    width: 30px;
-    margin: 10px 16px;
+    width: 27px;
+    margin-top: 12px;
+}
+
+footer .SNS_icon i {
+    color: #313131;
+    margin-top: 13px;
+    font-size: 27px;
 }
 
 .container {
