@@ -4,64 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <title>HONOKA YAMAMOTO</title>
+    <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
+    <script src="jquery.inview.js"></script>
+    </head>
 
 <script>
-    $(function() {
-        $(window).scroll(function() {
-            $('.fadein').each(function() {
-                var elemPos = $(this).offset().top;
-                var scroll = $(window).scrollTop();
-                var windowHeight = $(window).height();
-                if (scroll > elemPos - windowHeight + 400) {
-                    $(this).addClass('scrollin');
-                }
-            });
-        });
-    });
+//    $(function() {
+//        $(window).scroll(function() {
+//            $('.fadein').each(function() {
+//                var elemPos = $(this).offset().top;
+//                var scroll = $(window).scrollTop();
+//                var windowHeight = $(window).height();
+//                if (scroll > elemPos - windowHeight + 400) {
+//                    $(this).addClass('scrollin');
+//                }
+//            });
+//        });
+//    });
 
-    $(function() {
-        $(window).scroll(function() {
-            $('.fadein_2nd').each(function() {
-                var elemPos = $(this).offset().top;
-                var scroll = $(window).scrollTop();
-                var windowHeight = $(window).height();
-                if (scroll > elemPos - windowHeight + 400) {
-                    $(this).addClass('scrollin');
-                }
-            });
-        });
+     $(function() {
+    $('.inView').on('inview', function(event, isInView) {
+      if (isInView) {
+        $(this).addClass('fadeInUp');
+      }
     });
+  });
 
-    $(function() {
-        $(window).scroll(function() {
-            $('.fadein_3rd').each(function() {
-                var elemPos = $(this).offset().top;
-                var scroll = $(window).scrollTop();
-                var windowHeight = $(window).height();
-                if (scroll > elemPos - windowHeight + 400) {
-                    $(this).addClass('scrollin');
-                }
-            });
-        });
-    });
 
-    $(function() {
-        $(window).scroll(function() {
-            $('.fadein_4th').each(function() {
-                var elemPos = $(this).offset().top;
-                var scroll = $(window).scrollTop();
-                var windowHeight = $(window).height();
-                if (scroll > elemPos - windowHeight + 400) {
-                    $(this).addClass('scrollin');
-                }
-            });
-        });
-    });
+    //    $(function() {
+    //        $(window).scroll(function() {
+    //            $('.fadein_2nd').each(function() {
+    //                var elemPos = $(this).offset().top;
+    //                var scroll = $(window).scrollTop();
+    //                var windowHeight = $(window).height();
+    //                if (scroll > elemPos - windowHeight + 400) {
+    //                    $(this).addClass('scrollin');
+    //                }
+    //            });
+    //        });
+    //    });
+    //
+    //    $(function() {
+    //        $(window).scroll(function() {
+    //            $('.fadein_3rd').each(function() {
+    //                var elemPos = $(this).offset().top;
+    //                var scroll = $(window).scrollTop();
+    //                var windowHeight = $(window).height();
+    //                if (scroll > elemPos - windowHeight + 400) {
+    //                    $(this).addClass('scrollin');
+    //                }
+    //            });
+    //        });
+    //    });
+    //
+    //    $(function() {
+    //        $(window).scroll(function() {
+    //            $('.fadein_4th').each(function() {
+    //                var elemPos = $(this).offset().top;
+    //                var scroll = $(window).scrollTop();
+    //                var windowHeight = $(window).height();
+    //                if (scroll > elemPos - windowHeight + 400) {
+    //                    $(this).addClass('scrollin');
+    //                }
+    //            });
+    //        });
+    //    });
 
 </script>
 
@@ -73,44 +84,72 @@
             </div>
             <div class="fadein">
                 <h2>- Photos -</h2>
-            </div><section id="photos-list">
-                <div class="fadein">
+            </div>
+
+            <div id="photos-list">
+                    <div class="photos-fadein inView animated">
+                        <img src="images/works/photos/yuu.jpg">
+                        <img src="images/works/photos/fireflower_xcamp.jpg">
+                        <img src="images/works/photos/fuyu.jpg">
+                    </div>
+                    <div class="photos-fadein inView animated">
+                        <img src="images/works/photos/aonodoukutu.jpg">
+                        <img src="images/works/photos/midtown.JPG">
+                        <img src="images/works/photos/flower.jpg">
+                    </div>
+                    <div class="photos-fadein inView animated">
+                        <img src="images/works/photos/riicyann.JPG">
+                        <img src="images/works/photos/wintersakura.JPG">
+                        <img src="images/works/photos/supermoon.jpg" alt="">
+                    </div>
+                    <div class="photos-fadein inView animated">
+                        <img src="images/works/photos/okura1.jpg">
+                        <img src="images/works/photos/fuyu2.jpg">
+                        <img src="images/works/photos/okura2.jpg">
+                    </div>
+            </div>
+
+            <!--
+             <div id="photos-list">
+                <div class="photos-left">
                     <img src="images/works/photos/yuu.jpg">
                 </div>
-                <div class="fadein_2nd">
+                <div class="photos-left">
                     <img src="images/works/photos/aonodoukutu.jpg">
                 </div>
-                <div class="fadein_3rd">
+                <div class="photos-left">
                     <img src="images/works/photos/supermoon.jpg">
                 </div>
-                <div class="fadein_4th">
+                <div class="photos-left">
                     <img src="images/works/photos/okura1.jpg">
                 </div>
-                <div class="fadein">
+                <div class="photos-center">
                     <img src="images/works/photos/fireflower_xcamp.jpg">
                 </div>
-                <div class="fadein_2nd">
+                <div class="photos-center">
                     <img src="images/works/photos/flower.jpg">
                 </div>
-                <div class="fadein_3rd">
+                <div class="photos-center">
                     <img src="images/works/photos/riicyann.JPG">
                 </div>
-                <div class="fadein_4th">
+                <div class="photos-center">
                     <img src="images/works/photos/fuyu2.jpg">
                 </div>
-                <div class="fadein">
+                <div class="photos-right">
                     <img src="images/works/photos/fuyu.jpg">
                 </div>
-                <div class="fadein_2nd">
+                <div class="photos-right">
                     <img src="images/works/photos/midtown.JPG">
                 </div>
-                <div class="fadein_3rd">
+                <div class="photos-right">
                     <img src="images/works/photos/wintersakura.JPG">
                 </div>
-                <div class="fadein_4th">
+                <div class="photos-right">
                     <img src="images/works/photos/okura2.jpg">
                 </div>
-            </section>
+            </div>
+-->
+
             <div class="fadein">
                 <h2>- DTM -</h2>
                 <div class="projects">
@@ -190,7 +229,9 @@
         </div>
     </div>
 
+<!--
     <div id="top">
         <a href="/index.html">Home</a>
     </div>
+-->
 </body>
