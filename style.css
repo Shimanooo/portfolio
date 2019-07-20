@@ -260,93 +260,31 @@ header {
     margin: 0 auto;  
 }
 
-.photos-fadein:nth-child(1) {
-    animation-delay: 0.2s;
+.fadein:nth-child(1) {
+    animation-delay: 0.7s;
+    opacity: 2;
 }
 
-.photos-fadein:nth-child(2) {
-    animation-delay: 0.5s;
+.fadein:nth-child(2) {
+    animation-delay: 1.4s;
+    opacity: 2;
 }
 
-.photos-fadein:nth-child(3) {
-    animation-delay: 0.8s;
+.fadein:nth-child(3) {
+    animation-delay: 2.1s;
+    opacity: 2;
 }
+
 
 #photos-list img {
     width: 400px;
     float: left;
 }
 
-#photos-list .photos-fadein {
+#photos-list .fadein {
     overflow: hidden;
 }
 
-/*
-.fadein {
-    opacity: 0;
-    transform: translate(0, 50px);
-    transition: all 600ms;
-}
-
-.fadein.scrollin {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.fadein_2nd {
-    opacity: 0;
-    transform: translate(0, 50px);
-    transition: all 600ms;
-}
-
-.fadein_2nd.scrollin {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.fadein_3rd {
-    opacity: 0;
-    transform: translate(0, 50px);
-    transition: all 600ms;
-}
-
-.fadein_3rd.scrollin {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
-.fadein_4th {
-    opacity: 0;
-    transform: translate(0, 50px);
-    transition: all 600ms;
-}
-
-.fadein_4th.scrollin {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-*/
-
-/*
-#photos-list img {
-    width: 100% !important;
-    height: auto !important;
-}
-*/
-
-/*
-#photos-list {
-    width: 75%;
-    line-height: 0;
-    -webkit-column-count: 4;
-    -webkit-column-gap: 0px;
-    -moz-column-count: 3;
-    -moz-column-gap: 0px;
-    column-count: 3;
-    column-gap: 0px;
-    margin: 0 auto;
-}
-*/
 
 .projects .img {
     display: block;
@@ -378,7 +316,7 @@ header {
 
 .projects p.date {
     text-align: right;
-    margin-bottom: 15px;
+    margin-bottom: 5%;
 }
 
 .projects a {
@@ -388,7 +326,7 @@ header {
 
 .StarMan {
     background: #BAD4EE;
-    width: 350px;
+    width: 20%;
     height: 450px;
     padding-top: 10px;
     margin-left: 150px;
@@ -405,26 +343,28 @@ header {
 }
 
 .NewWorld {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) ;
+    -webkit- transform: translateX(-50%) ;
     background: #BAD4EE;
-    width: 350px;
+    width: 20%;
     height: 450px;
-    padding-top: 10px;
-    float: left;
-    margin-left: 156px;
     border-radius: 10px;
     border: solid 5px white;
+    text-align: center;
 }
 
 .NewWorld img {
     display: block;
     width: calc(100% - 20px);
-    margin: 0 10px;
+    margin: 10px;
     border-radius: 5px;
 }
 
 .Hoshinokomoriuta {
     background: #BAD4EE;
-    width: 350px;
+    width: 20%;
     height: 450px;
     padding-top: 10px;
     margin-right: 150px;
@@ -453,6 +393,7 @@ header {
     margin-left: 670px;
     border-radius: 10px;
     border: solid 5px white;
+    text-align: center;
 }
 
 .Calc img {
@@ -485,7 +426,7 @@ header {
 }
 
 #Contact {
-    background: #C5E2C2;
+    background: linear-gradient(#C3E1C0, #96C7A0);
     position: fixed;
     top: 0;
     left: 0;
@@ -545,16 +486,26 @@ textarea {
     margin: 0 auto;
     width: 109px;
     padding-top: 50px;
+    border-bottom: solid 4px #949494;
+    border-radius: 3px;
+}
+
+.button:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
 }
 
 input[type="submit"] {
-    background: #F7C6BD;
+    background: #ffbfad;
     border: none;
     color: #fff;
     font-size: 17px;
     font-weight: bold;
     padding: 10px 20px;
     margin: 0 auto;
+    border-radius: 3px;
 }
 
 #top {
@@ -576,7 +527,7 @@ input[type="submit"] {
 }
 
 #thankyou {
-    background: #F7C8D6;
+    background: linear-gradient(#FFBFAD, #FFCB93);
     height: 975px;
 }
 
@@ -605,9 +556,11 @@ input[type="submit"] {
     margin-left: 765px;
     margin-top: 50px;
     width: 150px;
-    background-color: #C5E2C2;
+    background-color: #93C6FF;
     text-align: center;
     height: 50px;
+    border-bottom: solid 4px #696969;
+    border-radius: 3px;
 }
 
 #thankyou .thankyou_top a {
@@ -618,4 +571,11 @@ input[type="submit"] {
     color: #fff;
     font-size: 17px;
     margin-top: 20px;
+}
+
+#thankyou .thankyou_top:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
 }
